@@ -1,5 +1,5 @@
 ## House Prediction Machine Learning Project
-This is a machine learning project aimed at predicting house prices using various machine learning algorithms. It implements a pipeline to execute the process of data preparation, model training, testing, and evaluation. Additionally, it includes a log file creator and error handling to improve the robustness of the project.
+This is a machine learning project aimed at predicting house prices using Random forest. It implements a pipeline to execute the process of data preparation, model training, testing, and evaluation. Additionally, it includes a log file creator and error handling to improve the robustness of the project.
 ### Software installation 
 
 
