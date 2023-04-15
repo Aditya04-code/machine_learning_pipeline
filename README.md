@@ -1,12 +1,6 @@
-## Start Machine Learning project.
-
-### Software and account Requirement.
-
-1. [Github Account](https://github.com)
-2. [Heroku Account](https://dashboard.heroku.com/login)
-3. [VS Code IDE](https://code.visualstudio.com/download)
-4. [GIT cli](https://git-scm.com/downloads)
-5. [GIT Documentation](https://git-scm.com/docs/gittutorial)
+## House Prediction Machine Learning Project
+This is a machine learning project aimed at predicting house prices using various machine learning algorithms. It implements a pipeline to execute the process of data preparation, model training, testing, and evaluation. Additionally, it includes a log file creator and error handling to improve the robustness of the project.
+### Software installation 
 
 
 Creating conda environment
@@ -61,55 +55,31 @@ To check remote url
 git remote -v
 ```
 
-To setup CI/CD pipeline in heroku we need 3 information
-1. HEROKU_EMAIL = anishyadav7045075175@gmail.com
-2. HEROKU_API_KEY = <>
-3. HEROKU_APP_NAME = ml-regression-app
 
-BUILD DOCKER IMAGE
-```
-docker build -t <image_name>:<tagname> .
-```
-> Note: Image name for docker must be lowercase
+### Project Overview
+The real estate industry has always been a critical sector that influences global economic growth. One of the major challenges for real estate investors is how to predict the value of a property accurately. However, with the advancement in machine learning, it is now possible to predict the value of a property based on several attributes or features.
 
+The objective of this project is to build a machine learning model that can predict house prices based on various features. The project implements a pipeline that executes the entire process of data preparation, model training, testing, and evaluation, thereby making it more efficient and effective.
 
-To list docker image
-```
-docker images
-```
+###Dataset
+The project uses the "House Prices: Advanced Regression Techniques" dataset from Kaggle, which contains 79 explanatory variables describing (almost) every aspect of residential homes in Ames, Iowa. The dataset has 1460 instances and 80 features, including 1 ID feature and 79 attributes. The goal is to predict the final price of each home based on these features.
 
-Run docker image
-```
-docker run -p 5000:5000 -e PORT=5000 f8c749e73678
-```
+Pipeline
+The pipeline executes the following steps:
 
-To check running container in docker
-```
-docker ps
-```
+Data Preparation: The dataset is loaded, missing values are imputed, and categorical variables are encoded using one-hot encoding. The data is split into training and testing sets with a ratio of 80:20.
 
-Tos stop docker conatiner
-```
-docker stop <container_id>
-```
+Model Training: The prepared data is used to train a machine learning model. The project uses a random forest regression model, but you can easily replace it with another model.
 
+Model Testing: The trained model is used to predict house prices on a holdout dataset. The testing dataset is also prepared in the same way as the training data.
 
+Model Evaluation: The model's performance is evaluated using the root mean squared error (RMSE) metric. The results are saved to a log file for future reference.
 
-```
-python setup.py install
-```
+Log File Creator
+The project includes a log file creator that stores the results of each run, including the date and time of execution, the hyperparameters used, and the RMSE value obtained. This allows for easy tracking of the project's progress and results.
 
+Error Handling
+The project includes error handling to catch and report any errors that occur during the execution of the pipeline. This helps to improve the robustness of the project and make it more reliable.
 
-Install ipykernel
-
-```
-pip install ipykernel
-```
-
-
-Data Drift:
-When your datset stats gets change we call it as data drift
-
-
-
-## Write a function to get training file path from artifact dir
+Conclusion
+In conclusion, this project provides a robust and reliable way to predict house prices using a pipeline that includes data preparation, model training, testing, and evaluation. The log file creator and error handling add to the project's robustness, making it a valuable tool for anyone interested in predicting house prices. With this project, real estate investors can make more informed decisions by predicting house prices accurately.
